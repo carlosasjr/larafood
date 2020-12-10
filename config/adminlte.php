@@ -239,6 +239,21 @@ return [
             'icon' => 'fas fa-list-alt'
         ],
 
+        [
+            'text' => 'Perfis',
+            'url'  => 'admin/profiles',
+            'can'  => '',
+            'icon' => 'fas fa-address-book'
+        ],
+
+        [
+            'text' => 'Permissões',
+            'url'  => 'admin/permissions',
+            'can'  => '',
+            'icon' => 'fas fa-lock'
+        ],
+
+
     ],
 
     /*

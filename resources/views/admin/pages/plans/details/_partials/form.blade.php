@@ -7,7 +7,7 @@
 </div>
 
 
-<div class="grom-group">
+<div class="form-group">
     <button type="submit" class="btn btn-primary">Salvar</button>
 </div>
 
