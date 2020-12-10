@@ -7,7 +7,6 @@ use App\Http\Requests\StoreUpdatePlanRequest;
 use App\Models\Plan;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Str;
 
 class PlanController extends Controller
 {
@@ -53,10 +52,7 @@ class PlanController extends Controller
      */
     public function store(StoreUpdatePlanRequest $request)
     {
-        $dataForm = $request->all();
-        $dataForm['url'] = Str::kebab($dataForm['name']);
-
-        $this->repository->create($dataForm);
+        $this->repository->create( $request->all());
 
         return redirect()->route('plans.index');
     }
@@ -120,10 +116,19 @@ class PlanController extends Controller
      */
     public function destroy(String $url)
     {
-        $plan = $this->repository->where('url', $url)->first();
+        $plan = $this->repository
+                     ->with('details')
+                     ->where('url', $url)
+                     ->first();
 
         if (!$plan)
             return redirect()->back();
+
+        if ($plan->details->count() > 0) {
+            return redirect()
+                ->back()
+                ->with('error', 'Não foi possível deletar! Existem detalhes vinculados a este plano');
+        }
 
         $plan->delete();
 

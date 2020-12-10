@@ -3,15 +3,16 @@
 @section('title', 'Detalhes do plano')
 
 @section('content_header')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item"><a href="{{ route('plans.index') }}">Planos</a></li>
+    </ol>
+
     <h1>Detalhes do Plano {{ $plan->name }}</h1>
 @stop
 
 @section('content')
     <div class="card">
-        <div class="car-header">
-            <h1>{{ $plan->name }}</h1>
-        </div>
-
         <div class="card-body">
             <ul>
                 <li><strong>Nome: </strong> {{ $plan->name }}</li>
@@ -22,6 +23,9 @@
         </div>
 
         <div class="card-footer">
+
+            @include('admin.includes.alerts')
+
             <form action="{{ route('plans.destroy', $plan->url) }}" method="post">
                 @csrf
                 @method('delete')
