@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfilesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PlanProfilesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_11_134639_create_plan_profile_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/permissions/profiles/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/plans/profiles/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/plans/profiles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/ProfilePermissionsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Plan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Plan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/permissions/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/plans/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/plans/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/profiles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages/plans/profiles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -180,11 +190,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\plans\profiles" />
+      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\permissions\profiles" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\profiles\permissions" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\permissions" />
       <recent name="C:\Docker\Projects\larafood\resources\lang" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\profiles" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\plans\details" />
     </key>
   </component>
   <component name="RunManager">
@@ -205,7 +215,7 @@
       <workItem from="1607463970513" duration="3782000" />
       <workItem from="1607523814091" duration="20137000" />
       <workItem from="1607607331388" duration="21042000" />
-      <workItem from="1607686472099" duration="1463000" />
+      <workItem from="1607686472099" duration="9949000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -242,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607686993066</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Detach Permission Profile">
+      <created>1607688219670</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607688219670</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,28 +274,30 @@
     <MESSAGE value="Create Profile e Permission Crud" />
     <MESSAGE value="Create Profile and Permission Crud" />
     <MESSAGE value="List Permissions Available and Attach with Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="List Permissions Available and Attach with Profile" />
+    <MESSAGE value="Detach Permission Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Detach Permission Profile" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1607628764344">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1607705579219">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607628764344" />
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607554969028" />
-    <state x="1403" y="207" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607620386221">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607705579219" />
+    <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607706267581">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1403" y="207" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607620386221" />
-    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607622206950">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1607706267581" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607697983643">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607622206950" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607552446669" />
-    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1607686986375">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607697983643" />
+    <state x="204" y="0" key="CommitChangelistDialog2" timestamp="1607688215337">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1375" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607623413072" />
-    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607686986375" />
+    <state x="204" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607688215337" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1607380677228">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
@@ -292,11 +311,11 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1366" y="308" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607463850264" />
-    <state x="112" y="115" key="Vcs.Push.Dialog.v2" timestamp="1607687034878">
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2" timestamp="1607688222196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607618086716" />
-    <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607687034878" />
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607688222196" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -309,11 +328,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1607636710566">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607707673685">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607636710566" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535462998" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607707673685" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\ACL\PermissionController;
-use App\Http\Controllers\Admin\ACL\PermissionProfileController;
+use App\Http\Controllers\Admin\ACL\PermissionProfilesController;
+use App\Http\Controllers\Admin\ACL\PlanProfilesController;
+use App\Http\Controllers\Admin\ACL\ProfilePermissionsController;
 use App\Http\Controllers\Admin\ACL\ProfileController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\PlanDetailController;
@@ -20,10 +22,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
 
-    /** PERMISSIONS X PROFILES */
-    Route::any('profiles/{id}/permissions/create/search', [PermissionProfileController::class, 'createSearch'])->name('profiles.permissions.create.search');
+    /** PLANS X PROFILES */
+    Route::any('plans/{url}/profiles/create/search', [PlanProfilesController::class, 'createSearch'])->name('plans.profiles.create.search');
+    Route::resource('plans.profiles', PlanProfilesController::class)->except(['show', 'edit', 'update']);
 
-     Route::resource('profiles.permissions',PermissionProfileController::class)->except(['show', 'edit', 'update']);
+
+    /** PERMISSIONS x  PROFILES */
+    Route::get('permissions/{id}/profiles', [PermissionProfilesController::class, 'index'])->name('permissions.profiles');
+
+    /** PROFILES x PERMISSIONS */
+    Route::any('profiles/{id}/permissions/create/search', [ProfilePermissionsController::class, 'createSearch'])->name('profiles.permissions.create.search');
+
+     Route::resource('profiles.permissions',ProfilePermissionsController::class)->except(['show', 'edit', 'update']);
 
 
     /** PERMISSIONS */

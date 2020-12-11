@@ -1,28 +1,20 @@
 @extends('adminlte::page')
 
-@section('title', 'Perfis')
+@section('title', "Perfis do Plano {$plan->name}")
 
 @section('content_header')
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="{{ route('profiles.index') }}">Perfis</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('plans.index') }}">Planos</a></li>
     </ol>
 
-    <h1>Perfis</h1>
+    <h1>Perfis do Plano {{ $plan->name }}</h1>
 @stop
 
 @section('content')
     <div class="card">
-        <div class="card-header">
-            <form action="{{ route('profiles.search') }}" method="post" class="form form-inline">
-                @csrf
-                <input type="text" name="filter" class="form-control" value="{{ $filters['filter'] ?? '' }}">
-                <button type="submit" class="btn btn-dark">Filtrar</button>
-            </form>
-        </div>
-
         <div class="card-body">
-            <p><a href="{{ route('profiles.create') }}" class="btn btn-primary"><i class="fas fa-plus-square"></i> Adicionar</a></p>
+            <p><a href="{{ route('plans.profiles.create', $plan->url) }}" class="btn btn-primary"><i class="fas fa-plus-square"></i> Adicionar</a></p>
 
             <table class="table table-condensed">
                 <thead>
@@ -37,9 +29,12 @@
                         <tr>
                             <td>{{ $profile->name }}</td>
                              <td>
-                                <a href="{{ route('profiles.show', $profile->id) }}" class="btn btn-warning">Ver</a>
-                                <a href="{{ route('profiles.edit', $profile->id) }}" class="btn btn-info">Editar</a>
-                                 <a href="{{ route('profiles.permissions.index', $profile->id) }}" class="btn btn-dark"><i class="fas fa-lock"></i></a>
+                                 <form action="{{ route('plans.profiles.destroy', [$plan->url, $profile->id]) }}" method="post" class="form form-inline">
+                                     @csrf
+                                     @method('delete')
+
+                                     <button type="submit" class="btn btn-danger">Deletar</button>
+                                 </form>
                             </td>
                         </tr>
                     @endforeach

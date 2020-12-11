@@ -16,6 +16,11 @@ class Profile extends Model
         return $this->belongsToMany(Permission::class);
     }
 
+    public function plans()
+    {
+        return $this->belongsToMany(Plan::class, 'plan_profile');
+    }
+
     public function permissionsAvailable($filter = null)
     {
         return Permission::WhereNotIn('permissions.id', function ($query)  {

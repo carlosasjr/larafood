@@ -5,7 +5,7 @@
 @section('content_header')
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="{{ route('permissions.index') }}">Perfils</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('permissions.index') }}">Permissões</a></li>
     </ol>
 
     <h1>Permissões</h1>
@@ -39,7 +39,8 @@
                              <td>
                                 <a href="{{ route('permissions.show', $permission->id) }}" class="btn btn-warning">Ver</a>
                                 <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-info">Editar</a>
-                            </td>
+                                 <a href="{{ route('permissions.profiles', $permission->id) }}" class="btn btn-dark"><i class="fas fa-address-book"></i></a>
+                             </td>
                         </tr>
                     @endforeach
                 </tbody>

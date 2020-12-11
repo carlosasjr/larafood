@@ -7,7 +7,7 @@ use App\Models\Permission;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 
-class PermissionProfileController extends Controller
+class ProfilePermissionsController extends Controller
 {
 
     /**
@@ -20,18 +20,15 @@ class PermissionProfileController extends Controller
     private $permission;
 
     /**
-     * PermissionProfileController constructor.
+     * ProfilePermissionsController constructor.
      * @param Profile $profile
      * @param Permission $permission
      */
     public function __construct(Profile $profile, Permission $permission)
     {
-
         $this->profile = $profile;
         $this->permission = $permission;
     }
-
-
 
     /**
      * Display a listing of the resource.
@@ -114,7 +111,7 @@ class PermissionProfileController extends Controller
 
         $profile->permissions()->detach($permission);
 
-        return redirect()->route('profiles.permissions.index', $profile->id);
+        return redirect()->back();
     }
 
     public function createSearch(Request $request, int $id)
