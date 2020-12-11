@@ -23,7 +23,7 @@ Route::prefix('admin')->group(function () {
     /** PERMISSIONS X PROFILES */
     Route::any('profiles/{id}/permissions/create/search', [PermissionProfileController::class, 'createSearch'])->name('profiles.permissions.create.search');
 
-     Route::resource('profiles.permissions',PermissionProfileController::class);
+     Route::resource('profiles.permissions',PermissionProfileController::class)->except(['show', 'edit', 'update']);
 
 
     /** PERMISSIONS */

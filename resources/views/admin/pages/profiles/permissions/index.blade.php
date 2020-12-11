@@ -13,14 +13,6 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">
-            <form action="{{ route('permissions.search') }}" method="post" class="form form-inline">
-                @csrf
-                <input type="text" name="filter" class="form-control" value="{{ $filters['filter'] ?? '' }}">
-                <button type="submit" class="btn btn-dark">Filtrar</button>
-            </form>
-        </div>
-
         <div class="card-body">
             <p><a href="{{ route('profiles.permissions.create', $profile->id) }}" class="btn btn-primary"><i class="fas fa-plus-square"></i> Adicionar</a></p>
 
@@ -37,8 +29,12 @@
                         <tr>
                             <td>{{ $permission->name }}</td>
                              <td>
-                                <a href="{{ route('profiles.permissions.show', [$profile->id, $permission->id]) }}" class="btn btn-warning">Ver</a>
-                                <a href="{{ route('profiles.permissions.edit', [$profile->id, $permission->id]) }}" class="btn btn-info">Editar</a>
+                                 <form action="{{ route('profiles.permissions.destroy', [$profile->id, $permission->id]) }}" method="post" class="form form-inline">
+                                     @csrf
+                                     @method('delete')
+
+                                     <button type="submit" class="btn btn-danger">Deletar</button>
+                                 </form>
                             </td>
                         </tr>
                     @endforeach

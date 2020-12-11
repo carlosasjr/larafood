@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_161743_create_permission_profile_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/alerts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/alerts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/profiles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/profiles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ACL/PermissionProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/profiles/permissions/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +205,7 @@
       <workItem from="1607463970513" duration="3782000" />
       <workItem from="1607523814091" duration="20137000" />
       <workItem from="1607607331388" duration="21042000" />
-      <workItem from="1607686472099" duration="281000" />
+      <workItem from="1607686472099" duration="1463000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -242,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607623419503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="List Permissions Available and Attach with Profile">
+      <created>1607686993066</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607686993066</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +256,8 @@
     <MESSAGE value="Create Plan Details Crud&#10;Do not allow to delete plans that have details" />
     <MESSAGE value="Create Profile e Permission Crud" />
     <MESSAGE value="Create Profile and Permission Crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Profile and Permission Crud" />
+    <MESSAGE value="List Permissions Available and Attach with Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="List Permissions Available and Attach with Profile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1607628764344">
@@ -273,11 +274,11 @@
     </state>
     <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607622206950" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607552446669" />
-    <state x="1375" y="224" key="CommitChangelistDialog2" timestamp="1607623413072">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1607686986375">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1375" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607623413072" />
-    <state x="16" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607552241440" />
+    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607686986375" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1607380677228">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
@@ -291,10 +292,11 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1366" y="308" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607463850264" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1607618086716">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2" timestamp="1607687034878">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607618086716" />
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607687034878" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
