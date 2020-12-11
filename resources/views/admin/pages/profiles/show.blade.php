@@ -5,7 +5,7 @@
 @section('content_header')
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="{{ route('profiles.index') }}">perfil</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('profiles.index') }}">Perfil</a></li>
     </ol>
 
     <h1>Detalhes do perfil {{ $profile->name }}</h1>
