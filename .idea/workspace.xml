@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/TableUserSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/larafood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larafood.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Tenant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_09_11_195716_create_tenants_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/pages/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_07_204152_create_plans_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_08_07_204152_create_plans_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_09_193929_create_plan_details_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_09_09_193929_create_plan_details_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages/plans/profiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -205,12 +189,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\resources\views\site\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\public\css" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\plans\profiles" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\permissions\profiles" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\profiles\permissions" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\permissions" />
-      <recent name="C:\Docker\Projects\larafood\resources\lang" />
     </key>
   </component>
   <component name="RunManager">
@@ -231,7 +218,7 @@
       <workItem from="1607463970513" duration="3782000" />
       <workItem from="1607523814091" duration="20137000" />
       <workItem from="1607607331388" duration="21042000" />
-      <workItem from="1607686472099" duration="11748000" />
+      <workItem from="1607686472099" duration="17624000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -282,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607712469516</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create Default Authentication and TableUserSeeder">
+      <created>1607714540856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607714540856</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +293,8 @@
     <MESSAGE value="List Permissions Available and Attach with Profile" />
     <MESSAGE value="Detach Permission Profile" />
     <MESSAGE value="Create PlanProfiles Attach" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create PlanProfiles Attach" />
+    <MESSAGE value="Create Default Authentication and TableUserSeeder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Default Authentication and TableUserSeeder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -321,29 +316,29 @@
     </state>
     <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607622206950" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607697983643" />
-    <state x="204" y="0" key="CommitChangelistDialog2" timestamp="1607712462726">
+    <state x="204" y="0" key="CommitChangelistDialog2" timestamp="1607714536027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1375" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607623413072" />
-    <state x="204" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607712462726" />
+    <state x="204" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607714536027" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1607380677228">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1530" y="404" key="FileChooserDialogImpl/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607380677228" />
-    <state x="388" y="322" key="NewPhpFileDialog" timestamp="1607544253746">
+    <state x="388" y="322" key="NewPhpFileDialog" timestamp="1607715029867">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607464939386" />
-    <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607544253746" />
+    <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607715029867" />
     <state x="1366" y="308" key="SettingsEditor" timestamp="1607463850264">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1366" y="308" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607463850264" />
-    <state x="112" y="115" key="Vcs.Push.Dialog.v2" timestamp="1607712492447">
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2" timestamp="1607714544841">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607618086716" />
-    <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607712492447" />
+    <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607714544841" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
