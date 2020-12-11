@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')
+    ->middleware('auth')
+    ->group(function () {
 
     /** PLANS X PROFILES */
     Route::any('plans/{url}/profiles/create/search', [PlanProfilesController::class, 'createSearch'])->name('plans.profiles.create.search');
@@ -56,3 +58,8 @@ Route::prefix('admin')->group(function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Auth::routes();
+
