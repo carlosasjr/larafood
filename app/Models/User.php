@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'tenant_id'
     ];
 
     /**
@@ -44,5 +45,18 @@ class User extends Authenticatable
     public function tenant()
     {
         return $this->belongsTo(Tenant::class);
+    }
+
+    public function scopeTenantUser($query)
+    {
+        return $query->where('tenant_id', auth()->user()->tenant_id);
+    }
+
+    public function search($filter)
+    {
+        return $this->where('name', 'like', "%{$filter}%")
+                    ->orWhere('email', 'like', "%{$filter}%")
+                    ->tenantUser()
+                    ->paginate();
     }
 }
