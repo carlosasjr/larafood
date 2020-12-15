@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUpdateCategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,6 @@ class CategoryController extends Controller
 
     public function __construct(Category $category)
     {
-
         $this->repository = $category;
     }
 
@@ -39,29 +39,35 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.categories.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreUpdateCategoryRequest $request
+     * @return void
      */
-    public function store(Request $request)
+    public function store(StoreUpdateCategoryRequest $request)
     {
-        //
+        $this->repository->create($request->all());
+
+        return redirect()->route('categories.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
-        //
+        if (!$category = $this->repository->find($id)) {
+            return redirect()->back();
+        }
+
+        return view('admin.pages.categories.show', compact('category'));
     }
 
     /**
@@ -70,9 +76,13 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
-        //
+        if (!$category = $this->repository->find($id)) {
+            return redirect()->back();
+        }
+
+        return view('admin.pages.categories.edit', compact('category'));
     }
 
     /**
@@ -82,9 +92,15 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreUpdateCategoryRequest $request, $id)
     {
-        //
+        if (!$category = $this->repository->find($id)) {
+            return redirect()->back();
+        }
+
+        $category->update($request->all());
+
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -93,8 +109,23 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        //
+        if (!$category = $this->repository->find($id)) {
+            return redirect()->back();
+        }
+
+        $category->delete();
+
+        return redirect()->route('categories.index');
+    }
+
+    public function search(Request $request)
+    {
+        $filters = $request->except('_token');
+
+        $categories = $this->repository->search($request->filter);
+
+        return view('admin.pages.categories.index', compact('categories', 'filters'));
     }
 }
