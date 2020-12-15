@@ -27,6 +27,7 @@
             <table class="table table-condensed">
                 <thead>
                 <tr>
+                    <th>Imagem</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th width="300">Ações</th>
@@ -36,11 +37,15 @@
                 <tbody>
                 @foreach($products as $product)
                     <tr>
+                        <td>
+                            <img src="{{ asset("storage/$product->image") }}" alt="{{ $product->name }}" style="max-width: 90px">
+                        </td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->description }}</td>
                         <td>
                             <a href="{{ route('products.show', $product->id) }}" class="btn btn-warning">Ver</a>
                             <a href="{{ route('products.edit', $product->id) }}" class="btn btn-info">Editar</a>
+                            <a href="{{ route('products.categories.index', $product->id) }}" class="btn btn-info"><i class="fas fa-layer-group"></i></a>
                         </td>
                     </tr>
                 @endforeach

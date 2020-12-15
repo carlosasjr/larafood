@@ -8,7 +8,9 @@ use App\Http\Controllers\Admin\ACL\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\PlanDetailController;
+use App\Http\Controllers\Admin\ProductCategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\TableController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +29,15 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')
     ->middleware('auth')
     ->group(function () {
+
+        /** TABLES */
+        Route::any('tables/search', [TableController::class, 'search'])->name('tables.search');
+        Route::resource('tables', TableController::class);
+
+        /** PRODUCT X CATEGORY */
+        Route::any('products/{id}/categories/create/search',
+            [ProductCategoryController::class, 'createSearch'])->name('products.categories.create.search');
+        Route::resource('products.categories', ProductCategoryController::class);
 
         /** PRODUCTS */
         Route::any('products/search', [ProductController::class, 'search'])->name('products.search');

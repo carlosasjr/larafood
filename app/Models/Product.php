@@ -17,12 +17,28 @@ class Product extends Model
         return $this->belongsToMany(Category::class);
     }
 
+    public function tenant()
+    {
+        return $this->belongsTo(Tenant::class);
+    }
+
+
+    public function categoriesAvailable($filter = null)
+    {
+        return Category::whereNotIn('categories.id', function ($query) {
+            $query->select('category_product.category_id');
+            $query->from('category_product');
+            $query->whereRaw("category_product.product_id={$this->id}");
+        })->when($filter, function ($queryFilter) use ($filter) {
+            $queryFilter->where('name', 'like', "%{$filter}%");
+        })->get();
+    }
 
     public function search($filter)
     {
         return $this->where('name', 'like', "%{$filter}%")
-            ->orWhere('description', 'like', "%{$filter}%")
-            ->latest()
-            ->paginate();
+                    ->orWhere('description', 'like', "%{$filter}%")
+                    ->latest()
+                    ->paginate();
     }
 }

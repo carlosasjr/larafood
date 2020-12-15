@@ -1,14 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', "Editar Produto {$product->name}" )
+@section('title', "Editar Mesa {$table->identify}" )
 
 @section('content_header')
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Produtos</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('tables.index') }}">Mesas</a></li>
     </ol>
 
-    <h1>Editar o Produto: {{ $product->name }}</h1>
+    <h1>Editar o Mesa: {{ $table->identify }}</h1>
 @stop
 
 @section('content')
@@ -18,10 +18,10 @@
         </div>
 
         <div class="card-body">
-            <form class="form" action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data">
+            <form class="form" action="{{ route('tables.update', $table->id) }}" method="post">
                 @csrf
                 @method('PUT')
-                @include('admin.pages.products._partials.form')
+                @include('admin.pages.tables._partials.form')
             </form>
         </div>
 

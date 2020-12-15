@@ -274,6 +274,13 @@ return [
             'icon' => 'fas fa-cubes'
         ],
 
+        [
+            'text' => 'Mesas',
+            'url'  => 'admin/tables',
+            'can'  => '',
+            'icon' => 'fas fa-table'
+        ],
+
 
 
     ],

@@ -1,24 +1,25 @@
 @extends('adminlte::page')
 
-@section('title', 'Detalhes da Categoria')
+@section('title', 'Detalhes do Produto')
 
 @section('content_header')
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item"><a href="{{ route('categories.index') }}">Categorias</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Produtos</a></li>
     </ol>
 
-    <h1>Detalhes da Categoria {{ $category->name }}</h1>
+    <h1>Detalhes do Produto {{ $product->name }}</h1>
 @stop
 
 @section('content')
     <div class="card">
         <div class="card-body">
             <ul>
-                <li><strong>Nome: </strong> {{ $category->name }}</li>
-                <li><strong>Descrição: </strong> {{ $category->description }}</li>
-                <li><strong>URL: </strong> {{ $category->url }}</li>
-                <li><strong>Empresa: </strong> {{ $category->tenant->name }}</li>
+                <li><img src="{{ asset("storage/$product->image") }}" alt="{{ $product->name }}" style="max-width: 90px"></li>
+                <li><strong>Nome: </strong> {{ $product->name }}</li>
+                <li><strong>Descrição: </strong> {{ $product->description }}</li>
+                <li><strong>URL: </strong> {{ $product->url }}</li>
+                <li><strong>Empresa: </strong> {{ $product->tenant->name }}</li>
             </ul>
         </div>
 
@@ -26,7 +27,7 @@
 
             @include('admin.includes.alerts')
 
-            <form action="{{ route('categories.destroy', $category->id) }}" method="post">
+            <form action="{{ route('products.destroy', $product->id) }}" method="post">
                 @csrf
                 @method('delete')
                 <button type="submit" class="btn btn-danger">Delete</button>

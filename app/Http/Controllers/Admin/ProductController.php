@@ -7,6 +7,7 @@ use App\Http\Requests\StoreUpdateProductRequest;
 use App\Models\Product;
 use App\Tenant\ManagerTenant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -108,6 +109,8 @@ class ProductController extends Controller
         if ($request->hasFile('image') && $request->image->isValid()) {
             $tenant = app(ManagerTenant::class)->getTenant();
 
+            $this->deleteImageIfExists($product);
+
             $data['image'] =  $request->image->store("tenants/{$tenant->uuid}/products");
         }
 
@@ -128,6 +131,8 @@ class ProductController extends Controller
             return redirect()->back();
         }
 
+        $this->deleteImageIfExists($product);
+
         $product->delete();
 
         return redirect()->route('products.index');
@@ -140,5 +145,15 @@ class ProductController extends Controller
         $products = $this->repository->search($request->filter);
 
         return view('admin.pages.products.index', compact('products', 'filters'));
+    }
+
+    /**
+     * @param $product
+     */
+    private function deleteImageIfExists($product): void
+    {
+        if ($product->image && Storage::exists($product->image)) {
+            Storage::delete($product->image);
+        }
     }
 }
