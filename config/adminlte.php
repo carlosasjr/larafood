@@ -231,53 +231,66 @@ return [
     */
 
     'menu' => [
+        [
+            'text' => 'Empresas',
+            'url'  => 'admin/tenants',
+            'can'  => 'tenants',
+            'icon' => 'fas fa-building'
+        ],
 
         [
             'text' => 'Planos',
             'url'  => 'admin/plans',
-            'can'  => '',
+            'can'  => 'plans',
             'icon' => 'fas fa-list-alt'
         ],
 
         [
             'text' => 'Perfis',
             'url'  => 'admin/profiles',
-            'can'  => '',
+            'can'  => 'profiles',
             'icon' => 'fas fa-address-book'
+        ],
+
+        [
+            'text' => 'Cargos',
+            'url'  => 'admin/roles',
+            'can'  => 'roles',
+            'icon' => 'fas fa-address-card'
         ],
 
         [
             'text' => 'Permissões',
             'url'  => 'admin/permissions',
-            'can'  => '',
+            'can'  => 'permissions',
             'icon' => 'fas fa-lock'
         ],
 
         [
             'text' => 'Usuários',
             'url'  => 'admin/users',
-            'can'  => '',
+            'can'  => 'users',
             'icon' => 'fas fa-user'
         ],
 
         [
             'text' => 'Categorias',
             'url'  => 'admin/categories',
-            'can'  => '',
+            'can'  => 'categories',
             'icon' => 'fas fa-layer-group'
         ],
 
         [
             'text' => 'Produtos',
             'url'  => 'admin/products',
-            'can'  => '',
+            'can'  => 'products',
             'icon' => 'fas fa-cubes'
         ],
 
         [
             'text' => 'Mesas',
             'url'  => 'admin/tables',
-            'can'  => '',
+            'can'  => 'tables',
             'icon' => 'fas fa-table'
         ],
 

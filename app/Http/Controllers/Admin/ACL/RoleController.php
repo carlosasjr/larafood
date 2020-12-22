@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Admin\ACL;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreUpdateProfilesRequest;
-use App\Models\Profile;
+use App\Http\Requests\StoreUpdateRoleRequest;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class ProfileController extends Controller
+class RoleController extends Controller
 {
     protected $repository;
 
-    public function __construct(Profile $profile)
+    public function __construct(Role $role)
     {
-        $this->middleware('can:profiles');
+        $this->middleware('can:roles');
 
-        $this->repository = $profile;
+        $this->repository = $role;
     }
 
     /**
@@ -26,9 +26,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profiles = $this->repository->paginate();
+        $roles = $this->repository->paginate();
 
-        return view('admin.pages.profiles.index', compact('profiles'));
+        return view('admin.pages.roles.index', compact('roles'));
     }
 
     /**
@@ -38,20 +38,20 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.profiles.create');
+        return view('admin.pages.roles.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreUpdateProfilesRequest $request
+     * @param StoreUpdateRoleRequest $request
      * @return Response
      */
-    public function store(StoreUpdateProfilesRequest $request)
+    public function store(StoreUpdateRoleRequest $request)
     {
         $this->repository->create($request->all());
 
-        return redirect()->route('profiles.index');
+        return redirect()->route('roles.index');
     }
 
     /**
@@ -62,11 +62,11 @@ class ProfileController extends Controller
      */
     public function show(int $id)
     {
-        if (!$profile = $this->repository->find($id)) {
+        if (!$role = $this->repository->find($id)) {
             return redirect()->back();
         }
 
-        return view('admin.pages.profiles.show', compact('profile'));
+        return view('admin.pages.roles.show', compact('role'));
     }
 
     /**
@@ -77,29 +77,29 @@ class ProfileController extends Controller
      */
     public function edit(int $id)
     {
-        if (!$profile = $this->repository->find($id)) {
+        if (!$role = $this->repository->find($id)) {
             return redirect()->back();
         }
 
-        return view('admin.pages.profiles.edit', compact('profile'));
+        return view('admin.pages.roles.edit', compact('role'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param StoreUpdateRoleRequest $request
+     * @param int $id
      * @return Response
      */
-    public function update(StoreUpdateProfilesRequest $request, int $id)
+    public function update(StoreUpdateRoleRequest $request, int $id)
     {
-        if (!$profile = $this->repository->find($id)) {
+        if (!$role = $this->repository->find($id)) {
             return redirect()->back();
         }
 
-        $profile->update($request->all());
+        $role->update($request->all());
 
-        return redirect()->route('profiles.index');
+        return redirect()->route('roles.index');
     }
 
     /**
@@ -110,13 +110,13 @@ class ProfileController extends Controller
      */
     public function destroy(int $id)
     {
-        if (!$profile = $this->repository->find($id)) {
+        if (!$role = $this->repository->find($id)) {
             return redirect()->back();
         }
 
-        $profile->delete();
+        $role->delete();
 
-        return redirect()->route('profiles.index');
+        return redirect()->route('roles.index');
     }
 
     /**
@@ -126,8 +126,8 @@ class ProfileController extends Controller
     {
         $filters = $request->except('_token');
 
-        $profiles = $this->repository->search($request->filter);
+        $roles = $this->repository->search($request->filter);
 
-        return view('admin.pages.profiles.index', compact('profiles', 'filters'));
+        return view('admin.pages.roles.index', compact('roles', 'filters'));
     }
 }

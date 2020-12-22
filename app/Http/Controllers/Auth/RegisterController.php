@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Services\TenantService;
+use App\Tenant\Events\TenantCreated;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
@@ -81,6 +82,10 @@ class RegisterController extends Controller
                       ->with('error', $make['message']);
         }
 
-        return $make['user'];
+        $user = $make['user'];
+
+        event(new TenantCreated($user));
+
+        return $user;
     }
 }

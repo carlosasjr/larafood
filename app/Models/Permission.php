@@ -16,6 +16,10 @@ class Permission extends Model
         return $this->belongsToMany(Profile::class);
     }
 
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
 
     public function search($filter)
     {
