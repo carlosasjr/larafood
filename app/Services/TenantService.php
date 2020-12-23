@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Plan;
 use App\Models\Tenant;
+use App\Repository\Contract\TenantRepositoryInterface;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,6 +24,23 @@ class TenantService
      * @var array
      */
     protected $data;
+    /**
+     * @var TenantRepositoryInterface
+     */
+    private $repository;
+
+
+    public function __construct(TenantRepositoryInterface $tenantRepository)
+    {
+
+        $this->repository = $tenantRepository;
+    }
+
+    public function getAll()
+    {
+        return $this->repository->getAll();
+    }
+
 
     /**
      * @param Plan $plan
