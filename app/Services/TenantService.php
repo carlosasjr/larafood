@@ -27,18 +27,23 @@ class TenantService
     /**
      * @var TenantRepositoryInterface
      */
-    private $repository;
+    private $tenantRepository;
 
 
     public function __construct(TenantRepositoryInterface $tenantRepository)
     {
 
-        $this->repository = $tenantRepository;
+        $this->tenantRepository = $tenantRepository;
     }
 
-    public function getAll()
+    public function getAll(int $per_page)
     {
-        return $this->repository->getAll();
+        return $this->tenantRepository->getAll($per_page);
+    }
+
+    public function getTenantByUuid(string $uuid)
+    {
+        return $this->tenantRepository->getTenantByUuid($uuid);
     }
 
 

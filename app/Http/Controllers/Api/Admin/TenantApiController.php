@@ -25,55 +25,32 @@ class TenantApiController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return AnonymousResourceCollection
      */
-    public function index()
+    public function index(Request $request)
     {
-        return TenantResource::collection($this->tenantService->getAll());
+        $per_page = (int) $request->get('per_page', 15);
+
+        $tenants = $this->tenantService->getAll($per_page);
+
+        return TenantResource::collection($tenants);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $uuid
+     * @return TenantResource
      */
-    public function show($id)
+    public function show($uuid)
     {
-        //
+       if (!$tenant = $this->tenantService->getTenantByUuid($uuid)) {
+           return response()->json(['message' => 'Not Found'], 404);
+       }
+
+         return new TenantResource($tenant);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

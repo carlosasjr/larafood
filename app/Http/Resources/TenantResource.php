@@ -19,6 +19,7 @@ class TenantResource extends JsonResource
             'uuid'          => $this->uuid,
             'url'           => $this->url,
             'email'         => $this->email,
+            'image'         => $this->image ? url("storage/{$this->image}") : null,
             'created_at'    => $this->created_at,
         ];
     }
