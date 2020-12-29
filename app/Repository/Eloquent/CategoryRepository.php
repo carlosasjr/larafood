@@ -26,10 +26,10 @@ class CategoryRepository implements CategoryRepositoryInterface
             ->get();
     }
 
-    public function getCategoryByUrl($url)
+    public function getCategoryByUuid(string $uuid)
     {
         return $this->entity
-            ->where('url', $url)
+            ->where('uuid', $uuid)
             ->withoutGlobalScope(new TenantScope())
             ->first();
     }

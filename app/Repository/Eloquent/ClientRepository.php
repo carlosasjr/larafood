@@ -2,8 +2,6 @@
 
 namespace App\Repository\Eloquent;
 
-
-
 use App\Models\Client;
 use App\Repository\Contract\ClientRepositoryInterface;
 

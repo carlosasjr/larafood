@@ -23,7 +23,7 @@ class ProductRepository implements ProductRepositoryInterface
                         if ($filterCategories != []) {
                             $query->whereHas('categories', function ($queryCat) use ($filterCategories) {
                                 $queryCat->withoutGlobalScope(new TenantScope());
-                                $queryCat->whereIn('categories.url', $filterCategories);
+                                $queryCat->whereIn('categories.uuid', $filterCategories);
                             });
                         }
                     })
@@ -31,11 +31,11 @@ class ProductRepository implements ProductRepositoryInterface
                     ->get();
     }
 
-    public function getProductByUrl(string $url)
+    public function getProductByUuid(string $uuid)
     {
         return $this->entity
                     ->withoutGlobalScope(new TenantScope())
-                    ->where('url', $url)
+                    ->where('uuid', $uuid)
                     ->first();
     }
 }

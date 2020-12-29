@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\AuthClientController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Admin\{CategoryApiController,
     ProductApiController,
@@ -17,7 +18,7 @@ Route::group([
 
     /** CATEGORIES */
     Route::get('tenants/{uuid}/categories', [CategoryApiController::class, 'categories']);
-    Route::get('categories/{url}', [CategoryApiController::class, 'show']);
+    Route::get('categories/{uuid}', [CategoryApiController::class, 'show']);
 
     /** TABLES */
     Route::get('tenants/{uuid}/tables', [TableApiController::class, 'index']);
@@ -25,8 +26,21 @@ Route::group([
 
     /** PRODUCTS */
     Route::get('tenants/{uuid}/products', [ProductApiController::class, 'index']);
-    Route::get('products/{url}', [ProductApiController::class, 'product']);
+    Route::get('products/{uuid}', [ProductApiController::class, 'product']);
 
     /** CLIENTS */
-    Route::post('/clients', [RegisterController::class, 'store']);
+    Route::post('clients', [RegisterController::class, 'store']);
+
+    /** SANCTUM CREATE TOKEN */
+    Route::post('sanctum/token', [AuthClientController::class, 'auth']);
 });
+
+Route::group([
+    'prefix' => 'v1',
+    'middleware' => ['auth:sanctum'],
+], function () {
+    Route::get('auth/me', [AuthClientController::class, 'me']);
+    Route::post('auth/logout', [AuthClientController::class, 'logout']);
+});
+
+
