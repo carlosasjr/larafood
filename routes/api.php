@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Admin\{CategoryApiController,
     ProductApiController,
     TableApiController,
@@ -25,4 +26,7 @@ Route::group([
     /** PRODUCTS */
     Route::get('tenants/{uuid}/products', [ProductApiController::class, 'index']);
     Route::get('products/{url}', [ProductApiController::class, 'product']);
+
+    /** CLIENTS */
+    Route::post('/clients', [RegisterController::class, 'store']);
 });

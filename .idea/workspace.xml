@@ -20,27 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProductApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/TelescopeServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Contract/ProductRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ProductRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ProductService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/telescope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/telescope/app-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/telescope/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/telescope/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/telescope/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/telescope/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/larafood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larafood.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StoreClientRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/ClientResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Contract/ClientRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Eloquent/ClientRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ClientService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_111947_create_clients_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +198,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repository/Eloquent" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -224,18 +213,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\app\Repository\Eloquent" />
+      <recent name="C:\Docker\Projects\larafood\app\Repository\Contract" />
+      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\users" />
+      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages" />
+      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\products" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Docker\Projects\larafood\app\Http\Requests\Api" />
       <recent name="C:\Docker\Projects\larafood\app\Http\Resources\Api" />
       <recent name="C:\Docker\Projects\larafood\app\Tenant" />
       <recent name="C:\Docker\Projects\larafood\resources\views\site\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\users" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\products" />
-      <recent name="C:\Docker\Projects\larafood\app\Models" />
-      <recent name="C:\Docker\Projects\larafood\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -266,7 +255,7 @@
       <workItem from="1608313189772" duration="7634000" />
       <workItem from="1608574006343" duration="6185000" />
       <workItem from="1608648520971" duration="23820000" />
-      <workItem from="1609163317400" duration="11450000" />
+      <workItem from="1609163317400" duration="13392000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -380,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609165903513</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Create API Products;&#10;Install Sanctum and Telescope">
+      <created>1609251502787</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609251502787</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +414,8 @@
     <MESSAGE value="Create Role CRUD;&#10;Module ACL" />
     <MESSAGE value="Organization of the project with Service Layer and Repository;&#10;&#10;Create TenantApiController.php&#10;Create TenantResource.php" />
     <MESSAGE value="Create API Category and Table Modules { Controller, Resource, Service and Repository)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create API Category and Table Modules { Controller, Resource, Service and Repository)" />
+    <MESSAGE value="Create API Products;&#10;Install Sanctum and Telescope" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create API Products;&#10;Install Sanctum and Telescope" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -429,11 +426,11 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1366" y="304" key="#Plugins/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608314610199" />
-    <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1609196628340">
+    <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1609252990635">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757178313" />
-    <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609196628340" />
+    <state x="1640" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609252990635" />
     <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607705579219" />
     <state x="1430" y="399" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608072329680">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -462,11 +459,11 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609165898095">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609251496920">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734173699" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609165898095" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609251496920" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607812907722" />
     <state x="292" y="222" key="FileChooserDialogImpl" timestamp="1607788385910">
       <screen x="0" y="0" width="1366" height="728" />
@@ -478,11 +475,11 @@
     </state>
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1607966755307" />
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788196659" />
-    <state x="1584" y="586" key="NewPhpFileDialog" timestamp="1609196581744">
+    <state x="1584" y="586" key="NewPhpFileDialog" timestamp="1609253074519">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757769695" />
-    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609196581744" />
+    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609253074519" />
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607715029867" />
     <state x="1565" y="597" key="ReplaceDuplicatesPrompt" timestamp="1608037795316">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -510,11 +507,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1609198422962">
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1609251986861">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757638659" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609198422962" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609251986861" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1607796144757" />
   </component>
   <component name="XDebuggerManager">
