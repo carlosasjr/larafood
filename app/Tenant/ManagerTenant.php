@@ -11,18 +11,26 @@ use App\Models\Tenant;
  */
 class ManagerTenant
 {
-    public function getTenantIdentify() : int
+    public function getTenantIdentify()
     {
-        return auth()->user()->tenant_id;
+        return ($this->isAuthenticated()) ? auth()->user()->tenant_id : '';
     }
 
-    public function getTenant() : Tenant
+    public function getTenant()
     {
-        return auth()->user()->tenant;
+        return ($this->isAuthenticated()) ? auth()->user()->tenant : '';
     }
 
     public function isAdmin() : bool
     {
         return in_array(auth()->user()->email, config('tenant.admins'));
+    }
+
+    /**
+     * @return bool
+     */
+    private function isAuthenticated(): bool
+    {
+        return auth()->check();
     }
 }
