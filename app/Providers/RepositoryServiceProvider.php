@@ -4,12 +4,16 @@ namespace App\Providers;
 
 use App\Repository\Eloquent\{CategoryRepository,
     ClientRepository,
+    OrderEvaluationRepositoryRepository,
+    OrderRepository,
     ProductRepository,
     TenantRepository,
     TableRepository};
 
 use App\Repository\Contract\{CategoryRepositoryInterface,
     ClientRepositoryInterface,
+    OrderEvaluationRepositoryInterface,
+    OrderRepositoryInterface,
     ProductRepositoryInterface,
     TenantRepositoryInterface,
     TableRepositoryInterface};
@@ -48,6 +52,16 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ClientRepositoryInterface::class,
             ClientRepository::class
+        );
+
+        $this->app->bind(
+            OrderRepositoryInterface::class,
+            OrderRepository::class
+        );
+
+        $this->app->bind(
+            OrderEvaluationRepositoryInterface::class,
+            OrderEvaluationRepositoryRepository::class
         );
     }
 

@@ -2,12 +2,29 @@
 
 use App\Http\Controllers\Api\Auth\AuthClientController;
 use App\Http\Controllers\Api\Auth\RegisterController;
+use App\Http\Controllers\Api\EvaluationApiController;
+use App\Http\Controllers\Api\OrderApiController;
 use App\Http\Controllers\Api\Admin\{CategoryApiController,
     ProductApiController,
     TableApiController,
     TenantApiController};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
+Route::group([
+    'prefix' => 'v1',
+    'middleware' => ['auth:sanctum'],
+], function () {
+    Route::get('auth/me', [AuthClientController::class, 'me']);
+    Route::post('auth/logout', [AuthClientController::class, 'logout']);
+
+    /** ORDERS */
+    Route::post('auth/orders', [OrderApiController::class, 'store']);
+    Route::post('auth/orders/{identify}/evaluations', [EvaluationApiController::class, 'store']);
+    Route::get('auth/my-orders', [OrderApiController::class, 'myOrders']);
+});
+
 
 Route::group([
     'prefix' => 'v1',
@@ -31,16 +48,14 @@ Route::group([
     /** CLIENTS */
     Route::post('clients', [RegisterController::class, 'store']);
 
+    /** ORDERS */
+    Route::post('orders', [OrderApiController::class, 'store']);
+    Route::get('orders/{identify}', [OrderApiController::class, 'show']);
+
     /** SANCTUM CREATE TOKEN */
     Route::post('sanctum/token', [AuthClientController::class, 'auth']);
+
 });
 
-Route::group([
-    'prefix' => 'v1',
-    'middleware' => ['auth:sanctum'],
-], function () {
-    Route::get('auth/me', [AuthClientController::class, 'me']);
-    Route::post('auth/logout', [AuthClientController::class, 'logout']);
-});
 
 

@@ -15,4 +15,17 @@ class Client extends Authenticatable
         'email',
         'password',
     ];
+
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+
+    public function evaluations()
+    {
+        return $this->hasMany(OrderEvaluation::class);
+    }
+
 }

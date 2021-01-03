@@ -6,6 +6,5 @@ interface ClientRepositoryInterface
 {
     public function store(array $data);
     public function getClientById(int $id);
-
 }
 
