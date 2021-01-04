@@ -21,9 +21,9 @@ class CategoryApiController extends Controller
         $this->categoryService = $categoryService;
     }
 
-    public function categories($uuid)
+    public function categories(TenantRequest $request)
     {
-        if (!$categories = $this->categoryService->getCategoriesByTenantUuid($uuid)) {
+        if (!$categories = $this->categoryService->getCategoriesByTenantUuid($request->token_company)) {
             return response()->json(['message' => 'Not Found'], 404);
         }
 

@@ -34,8 +34,8 @@ Route::group([
     Route::get('tenants/{uuid}', [TenantApiController::class, 'show']);
 
     /** CATEGORIES */
-    Route::get('tenants/{uuid}/categories', [CategoryApiController::class, 'categories']);
     Route::get('categories/{uuid}', [CategoryApiController::class, 'show']);
+    Route::get('categories', [CategoryApiController::class, 'categories']);
 
     /** TABLES */
     Route::get('tenants/{uuid}/tables', [TableApiController::class, 'index']);

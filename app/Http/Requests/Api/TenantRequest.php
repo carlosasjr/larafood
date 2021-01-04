@@ -24,7 +24,7 @@ class TenantRequest extends FormRequest
     public function rules()
     {
         return [
-            'uuid' => 'required|exists:tenants,uuid'
+            'token_company' => 'required|exists:tenants,uuid'
         ];
     }
 }
