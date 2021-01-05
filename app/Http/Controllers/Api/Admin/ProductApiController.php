@@ -21,11 +21,11 @@ class ProductApiController extends Controller
         $this->productService = $productService;
     }
 
-    public function index(Request $request, $uuid)
+    public function index(TenantRequest $request)
     {
         $filterCategories = $request->get('categories', []);
 
-        if (!$products = $this->productService->getProductByTenantUuid($uuid, $filterCategories)) {
+        if (!$products = $this->productService->getProductByTenantUuid($request->token_company, $filterCategories)) {
             return response()->json('Not Found', 404);
         }
 

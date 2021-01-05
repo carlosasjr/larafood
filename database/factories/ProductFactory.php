@@ -24,7 +24,7 @@ class ProductFactory extends Factory
     {
         return [
             'tenant_id' => Tenant::factory(),
-            'title' => $this->faker->unique()->name,
+            'name' => $this->faker->unique()->name,
             'description'   => $this->faker->sentence,
             'image' => 'file.png',
             'price' => 11.9

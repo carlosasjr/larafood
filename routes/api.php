@@ -11,6 +11,12 @@ use App\Http\Controllers\Api\Admin\{CategoryApiController,
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+/** CLIENT REGISTER */
+Route::post('auth/register', [RegisterController::class, 'store']);
+
+/** SANCTUM CREATE TOKEN */
+Route::post('auth/token', [AuthClientController::class, 'auth']);
+
 
 Route::group([
     'prefix' => 'v1',
@@ -30,8 +36,8 @@ Route::group([
     'prefix' => 'v1',
 ], function () {
     /** TENANTS */
-    Route::get('tenants', [TenantApiController::class, 'index']);
     Route::get('tenants/{uuid}', [TenantApiController::class, 'show']);
+    Route::get('tenants', [TenantApiController::class, 'index']);
 
     /** CATEGORIES */
     Route::get('categories/{uuid}', [CategoryApiController::class, 'show']);
@@ -42,19 +48,12 @@ Route::group([
     Route::get('tables', [TableApiController::class, 'index']);
 
     /** PRODUCTS */
-    Route::get('tenants/{uuid}/products', [ProductApiController::class, 'index']);
     Route::get('products/{uuid}', [ProductApiController::class, 'product']);
-
-    /** CLIENTS */
-    Route::post('clients', [RegisterController::class, 'store']);
+    Route::get('products', [ProductApiController::class, 'index']);
 
     /** ORDERS */
     Route::post('orders', [OrderApiController::class, 'store']);
     Route::get('orders/{identify}', [OrderApiController::class, 'show']);
-
-    /** SANCTUM CREATE TOKEN */
-    Route::post('sanctum/token', [AuthClientController::class, 'auth']);
-
 });
 
 

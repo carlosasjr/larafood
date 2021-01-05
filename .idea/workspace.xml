@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/TableTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/ProductTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/RegisterTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TableApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TableApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/TableFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TableFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProductApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProductApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ClientResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ClientResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/CategoryTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +199,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repository/Contract" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/pt-BR" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -216,11 +222,11 @@
       <recent name="C:\Docker\Projects\larafood\app\Tenant" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\resources\lang\pt-BR" />
       <recent name="C:\Docker\Projects\larafood\app\Repository\Contract" />
       <recent name="C:\Docker\Projects\larafood\app\Services" />
       <recent name="C:\Docker\Projects\larafood\app\Repository\Eloquent" />
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\users" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -253,7 +259,7 @@
       <workItem from="1608648520971" duration="23820000" />
       <workItem from="1609163317400" duration="30756000" />
       <workItem from="1609682547300" duration="9130000" />
-      <workItem from="1609791752913" duration="10994000" />
+      <workItem from="1609791752913" duration="20614000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -416,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609803665803</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Create Api Test of Tables">
+      <created>1609806516695</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1609806516695</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +449,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="first commit" />
     <MESSAGE value="create Crud of Plans" />
     <MESSAGE value="create Crud of Details of Plans" />
     <MESSAGE value="Create Plan Details Crud&#10;Do not allow to delete plans that have details" />
@@ -461,7 +473,8 @@
     <MESSAGE value="create CRUD Orders&#10;create Evaluations Order" />
     <MESSAGE value="create Factories all models" />
     <MESSAGE value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
+    <MESSAGE value="Create Api Test of Tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Api Test of Tables" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -505,11 +518,11 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609803651557">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609806510059">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734173699" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803651557" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609806510059" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
     <state x="292" y="222" key="FileChooserDialogImpl" timestamp="1607788385910">
       <screen x="0" y="0" width="1366" height="728" />
@@ -521,10 +534,10 @@
     </state>
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1607966755307" />
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788196659" />
-    <state x="388" y="322" key="NewPhpFileDialog" timestamp="1609700547300">
+    <state x="388" y="322" key="NewPhpFileDialog" timestamp="1609874929848">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757769695" />
+    <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609874929848" />
     <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609349867746" />
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1609700547300" />
     <state x="1565" y="597" key="ReplaceDuplicatesPrompt" timestamp="1609347137946">
@@ -553,11 +566,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1609804102700">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609877796396">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757638659" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609804102700" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609877796396" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609871665212" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609700814854" />
   </component>
   <component name="XDebuggerManager">
