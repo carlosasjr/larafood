@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/TenantTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/TableTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/CategoryApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/CategoryApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/TenantRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/TenantRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TableApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/TableApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TableFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TableFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CategoryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/CategoryTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,11 +209,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Docker\Projects\larafood\tests\Feature\Api" />
       <recent name="C:\Docker\Projects\larafood\tests\Feature\api" />
       <recent name="C:\Docker\Projects\larafood\app\Http\Requests\Api" />
       <recent name="C:\Docker\Projects\larafood\app\Http\Resources\Api" />
       <recent name="C:\Docker\Projects\larafood\app\Tenant" />
-      <recent name="C:\Docker\Projects\larafood\resources\views\site\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Docker\Projects\larafood\app\Repository\Contract" />
@@ -255,7 +253,7 @@
       <workItem from="1608648520971" duration="23820000" />
       <workItem from="1609163317400" duration="30756000" />
       <workItem from="1609682547300" duration="9130000" />
-      <workItem from="1609791752913" duration="9259000" />
+      <workItem from="1609791752913" duration="10994000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -411,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609796080888</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="create Api Tests:&#10; TenantTest.php, CategoryTest.php">
+      <created>1609803665803</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1609803665803</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +460,8 @@
     <MESSAGE value="Correcting tenants filter" />
     <MESSAGE value="create CRUD Orders&#10;create Evaluations Order" />
     <MESSAGE value="create Factories all models" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Factories all models" />
+    <MESSAGE value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -482,11 +488,11 @@
     <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608587734445" />
     <state x="1403" y="207" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608053807096" />
     <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609700622391" />
-    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609795520014">
+    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609803864035">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608746980615" />
-    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609795520014" />
+    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803864035" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788365120" />
     <state x="1668" y="337" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1609347134431">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -499,11 +505,11 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609796066338">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609803651557">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734173699" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609796066338" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803651557" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
     <state x="292" y="222" key="FileChooserDialogImpl" timestamp="1607788385910">
       <screen x="0" y="0" width="1366" height="728" />
@@ -529,11 +535,11 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1366" y="308" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607463850264" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1609796070828">
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1609803655405">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734194063" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609796070828" />
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803655405" />
     <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609703688905" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
@@ -547,11 +553,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1609802858776">
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1609804102700">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608757638659" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609802858776" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609804102700" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609700814854" />
   </component>
   <component name="XDebuggerManager">

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Api;
 
 use App\Models\Category;
 use App\Models\Tenant;
@@ -11,11 +11,11 @@ use Tests\TestCase;
 class CategoryTest extends TestCase
 {
     /**
-     * Erro Get Tenant
+     * Erro Get Categories by Tenant
      *
      * @return void
      */
-    public function testErrorGetTenant()
+    public function testErrorGetCategoriesByTenant()
     {
         $response = $this->getJson("/api/v1/categories");
 

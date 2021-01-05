@@ -38,8 +38,8 @@ Route::group([
     Route::get('categories', [CategoryApiController::class, 'categories']);
 
     /** TABLES */
-    Route::get('tenants/{uuid}/tables', [TableApiController::class, 'index']);
     Route::get('tables/{uuid}', [TableApiController::class, 'show']);
+    Route::get('tables', [TableApiController::class, 'index']);
 
     /** PRODUCTS */
     Route::get('tenants/{uuid}/products', [ProductApiController::class, 'index']);

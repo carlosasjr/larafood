@@ -22,9 +22,9 @@ class TableApiController extends Controller
     }
 
 
-    public function index($uuid)
+    public function index(TenantRequest $request)
     {
-        if (!$tables = $this->tableService->getTablesByTenantUuid($uuid)) {
+        if (!$tables = $this->tableService->getTablesByTenantUuid($request->token_company)) {
             return response()->json('Not Found', 404);
         }
 

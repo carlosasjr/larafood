@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Table;
 use App\Models\Tenant;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class TableFactory extends Factory
 {
@@ -24,7 +25,7 @@ class TableFactory extends Factory
     {
         return [
             'tenant_id' => Tenant::factory(),
-            'identify' => $this->faker->unique()->sentence([6]),
+            'identify' => Str::random(5).uniqid(),
             'description' => $this->faker->sentence,
         ];
     }
