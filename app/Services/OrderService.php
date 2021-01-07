@@ -43,7 +43,7 @@ class OrderService
     {
         $identify = $this->getIdentifyOrder(8);
         $status = 'open';
-        $tenantId = $this->getTenantIdByOrder($data['uuid']);
+        $tenantId = $this->getTenantIdByOrder($data['token_company']);
         $clientID = $this->getClientIdByOrder();
         $tableId = $this->getTableIdByOrder($data['table'] ?? '');
         $comment = isset($data['comment']) ? $data['comment'] : '';

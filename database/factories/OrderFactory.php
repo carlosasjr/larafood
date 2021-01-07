@@ -30,7 +30,7 @@ class OrderFactory extends Factory
             'client_id' => Client::factory(),
             'table_id' => Table::factory(),
             'identify' => uniqid() . Str::random(10),
-            'price' => 80.0,
+            'total' => 80.0,
             'status' => 'open',
             'comment' => $this->faker->sentence
 

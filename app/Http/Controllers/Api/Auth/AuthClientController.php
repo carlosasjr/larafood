@@ -18,7 +18,10 @@ class AuthClientController extends Controller
             'device_name' => 'required',
         ]);
 
+
         $client = Client::where('email', $request->email)->first();
+
+        //dd($client, $request->all());
 
         if (!$client || !Hash::check($request->password, $client->password)) {
             return response()->json(['message' => trans('messages.invalid_credentials')], 404);

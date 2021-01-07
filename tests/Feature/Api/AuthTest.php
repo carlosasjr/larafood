@@ -10,12 +10,11 @@ use Tests\TestCase;
 
 class AuthTest extends TestCase
 {
-    /**
-     * Error Auth
-     *
-     * @return void
-     */
-    public function testErrorAuth()
+    /* Error Auth
+    *
+    * @return void
+    */
+   public function testErrorAuth()
     {
         $response = $this->postJson('/api/auth/token');
 
@@ -30,17 +29,17 @@ class AuthTest extends TestCase
     public function testAuthInvalid()
     {
         $payload = [
-          'email' => 'invalid@invalid.com',
-          'password' => 'invalid',
-          'device_name' => 'invalid'
+            'email' => 'invalid@invalid.com',
+            'password' => 'invalid',
+            'device_name' => 'invalid'
         ];
 
         $response = $this->postJson('/api/auth/token', $payload);
 
         $response->assertStatus(404)
-                 ->assertExactJson([
-                    'message' => trans('message.invalid_credentials')
-                 ]);
+            ->assertExactJson([
+                'message' => trans('messages.invalid_credentials')
+            ]);
     }
 
     /**
@@ -53,15 +52,63 @@ class AuthTest extends TestCase
         $client = Client::factory()->create();
 
         $payload = [
-            'email'         => $client->email,
-            'password'      => 'password',
-            'device_name'   => Str::random(10)
+            'email' => $client->email,
+            'password' => 'password',
+            'device_name' => Str::random(10),
         ];
 
         $response = $this->postJson('/api/auth/token', $payload);
-        $response->dump();
 
         $response->assertStatus(200)
             ->assertJsonStructure(['token']);
     }
+
+    /* Error Get Me
+    *
+    * @return void
+    */
+   public function testErrorGetMe()
+    {
+        $response = $this->getJson('/api/v1/auth/me');
+
+        $response->assertStatus(401);
+    }
+
+
+    /*
+    * Get Me
+    * @return void
+    */
+    public function testGetMe()
+    {
+        $client = Client::factory()->create();
+        $token = $client->createToken(Str::random(10))->plainTextToken;
+
+        $response = $this->getJson('/api/v1/auth/me', [
+            'Authorization' => "Bearer {$token}"
+        ]);
+
+        $response->assertStatus(200);
+    }
+
+    /*
+    * Logout
+    * @return void
+    */
+    public function testLogout()
+    {
+        $client = Client::factory()->create();
+        $token = $client->createToken(Str::random(10))->plainTextToken;
+
+
+        $response = $this->postJson('/api/v1/auth/logout', [], [
+            'Authorization' => "Bearer {$token}"
+        ]);
+
+        $response->assertStatus(204);
+    }
+
+
+
+
 }

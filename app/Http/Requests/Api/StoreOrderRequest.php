@@ -24,9 +24,10 @@ class StoreOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'uuid'                  => 'required|exists:tenants,uuid',
+            'token_company'         => 'required|exists:tenants,uuid',
             'table'                 => 'nullable|exists:tables,uuid',
             'comment'               => 'nullable|max:1000',
+            'products'              => 'required',
             'products.*.identify'   => 'required|exists:products,uuid',
             'products.*.qty'        => 'required|integer'
         ];

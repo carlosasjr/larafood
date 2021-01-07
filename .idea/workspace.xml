@@ -19,19 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-BR/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/ProductTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/RegisterTest.php" afterDir="false" />
+    <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="Create Api Teste Product; Register; Auth">
+      <change afterPath="$PROJECT_DIR$/phpunit.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/EvaluationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/OrderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProductApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Admin/ProductApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ClientResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ClientResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EvaluationApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EvaluationApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/StoreOrderRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/StoreOrderRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/OrderService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/pt-BR/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pt-BR/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +201,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/pt-BR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -210,7 +212,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -229,11 +231,30 @@
       <recent name="C:\Docker\Projects\larafood\resources\views\admin\pages\users" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.OrderTest.testCreateNewOrder">
+    <configuration name="AuthTest.testErrorGetMe" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\AuthTest" file="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" method="testErrorGetMe" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthTest.testGetMe" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\AuthTest" file="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" method="testGetMe" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderTest.testCreateNewOrder" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\OrderTest" file="$PROJECT_DIR$/tests/Feature/Api/OrderTest.php" method="testCreateNewOrder" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.OrderTest.testCreateNewOrder" />
+        <item itemvalue="PHPUnit.AuthTest.testGetMe" />
+        <item itemvalue="PHPUnit.AuthTest.testErrorGetMe" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="4" Folder0="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder1="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder2="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master" Folder3="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master" CustomDictionaries="4" CustomDictionary0="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil.dic" CustomDictionary1="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms.dic" CustomDictionary2="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_technical-terms_without-accents.dic" CustomDictionary3="D:\PHP\Dictionary\IntelliJ.Portuguese.Brazil.Dictionary-master\portuguese-brazil_without-accents.dic" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,7 +280,9 @@
       <workItem from="1608648520971" duration="23820000" />
       <workItem from="1609163317400" duration="30756000" />
       <workItem from="1609682547300" duration="9130000" />
-      <workItem from="1609791752913" duration="20614000" />
+      <workItem from="1609791752913" duration="29511000" />
+      <workItem from="1609966640988" duration="12912000" />
+      <workItem from="1610057543539" duration="4717000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -429,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609806516695</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Create Api Teste Product; Register; Auth">
+      <created>1609879296976</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1609879296976</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +479,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create Crud of Plans" />
     <MESSAGE value="create Crud of Details of Plans" />
     <MESSAGE value="Create Plan Details Crud&#10;Do not allow to delete plans that have details" />
     <MESSAGE value="Create Profile e Permission Crud" />
@@ -474,7 +503,8 @@
     <MESSAGE value="create Factories all models" />
     <MESSAGE value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
     <MESSAGE value="Create Api Test of Tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Api Test of Tables" />
+    <MESSAGE value="Create Api Teste Product; Register; Auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Api Teste Product; Register; Auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -501,10 +531,10 @@
     <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608587734445" />
     <state x="1403" y="207" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608053807096" />
     <state x="66" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609700622391" />
-    <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609803864035">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610063314943">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608746980615" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063314943" />
     <state x="1594" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803864035" />
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788365120" />
     <state x="1668" y="337" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1609347134431">
@@ -518,16 +548,16 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1609806510059">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610019736706">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
-    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734173699" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609806510059" />
+    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879266328" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610019736706" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
-    <state x="292" y="222" key="FileChooserDialogImpl" timestamp="1607788385910">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1610055872065">
+      <screen x="1366" y="0" width="768" height="1326" />
     </state>
-    <state x="1530" y="404" key="FileChooserDialogImpl/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607380677228" />
+    <state x="1530" y="404" key="FileChooserDialogImpl/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610055872065" />
     <state x="292" y="222" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607788385910" />
     <state x="474" y="87" key="NewPhpClassDialog" timestamp="1607966755307">
       <screen x="0" y="0" width="1366" height="728" />
@@ -544,14 +574,14 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1565" y="597" key="ReplaceDuplicatesPrompt/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609347137946" />
-    <state x="1366" y="308" key="SettingsEditor" timestamp="1607463850264">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="598" y="18" key="SettingsEditor" timestamp="1610055907124">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="1366" y="308" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607463850264" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1609803655405">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="598" y="18" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610055907124" />
+    <state x="209" y="173" key="Vcs.Push.Dialog.v2" timestamp="1609879271878">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608734194063" />
+    <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879271878" />
     <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803655405" />
     <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609703688905" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
@@ -562,15 +592,16 @@
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="1551" y="569" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1607380706956" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1607535457195">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1610058899084">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610058899084" />
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609877796396">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610061234434">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609877796396" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609871665212" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610061234434" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609988321901" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609700814854" />
   </component>
   <component name="XDebuggerManager">
