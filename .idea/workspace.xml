@@ -19,21 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="Create Api Teste Product; Register; Auth">
-      <change afterPath="$PROJECT_DIR$/phpunit.phar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/EvaluationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/OrderTest.php" afterDir="false" />
+    <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/tables/qrcode.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/larafood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larafood.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/AuthClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EvaluationApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EvaluationApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/StoreOrderRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/StoreOrderRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/OrderService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ClientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/OrderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/pt-BR/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pt-BR/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/AuthTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TableController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/tables/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/tables/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +179,9 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/simplesoftwareio/simple-qrcode" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lLZfmlYdNcYxSxBM14MaKrGJoa" />
@@ -282,7 +282,8 @@
       <workItem from="1609682547300" duration="9130000" />
       <workItem from="1609791752913" duration="29511000" />
       <workItem from="1609966640988" duration="12912000" />
-      <workItem from="1610057543539" duration="4717000" />
+      <workItem from="1610057543539" duration="5957000" />
+      <workItem from="1610112800752" duration="3006000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -459,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609879296976</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Create Api Teste OrderTest.php, EvaluationTest.php and AuthTest.php">
+      <created>1610063691624</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1610063691624</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create Crud of Details of Plans" />
     <MESSAGE value="Create Plan Details Crud&#10;Do not allow to delete plans that have details" />
     <MESSAGE value="Create Profile e Permission Crud" />
     <MESSAGE value="Create Profile and Permission Crud" />
@@ -504,7 +511,8 @@
     <MESSAGE value="create Api Tests:&#10; TenantTest.php, CategoryTest.php" />
     <MESSAGE value="Create Api Test of Tables" />
     <MESSAGE value="Create Api Teste Product; Register; Auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Api Teste Product; Register; Auth" />
+    <MESSAGE value="Create Api Teste OrderTest.php, EvaluationTest.php and AuthTest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Api Teste OrderTest.php, EvaluationTest.php and AuthTest.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -548,10 +556,10 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610019736706">
-      <screen x="1366" y="0" width="768" height="1326" />
+    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1610063681407">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879266328" />
+    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063681407" />
     <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610019736706" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1610055872065">
@@ -564,11 +572,11 @@
     </state>
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1607966755307" />
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788196659" />
-    <state x="388" y="322" key="NewPhpFileDialog" timestamp="1609874929848">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1584" y="586" key="NewPhpFileDialog" timestamp="1610117534190">
+      <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609874929848" />
-    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609349867746" />
+    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610117534190" />
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1609700547300" />
     <state x="1565" y="597" key="ReplaceDuplicatesPrompt" timestamp="1609347137946">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -578,11 +586,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="598" y="18" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610055907124" />
-    <state x="209" y="173" key="Vcs.Push.Dialog.v2" timestamp="1609879271878">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1610064054915">
+      <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879271878" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609803655405" />
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610064054915" />
     <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609703688905" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
@@ -597,11 +605,11 @@
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610058899084" />
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610061234434">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1610117809671">
+      <screen x="1366" y="0" width="768" height="1326" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610061234434" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1609988321901" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063490776" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610117809671" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609700814854" />
   </component>
   <component name="XDebuggerManager">
