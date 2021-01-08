@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/OrderResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/OrderResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/OrderTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/OrderTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +278,7 @@
       <workItem from="1609791752913" duration="29511000" />
       <workItem from="1609966640988" duration="12912000" />
       <workItem from="1610057543539" duration="5957000" />
-      <workItem from="1610112800752" duration="7124000" />
+      <workItem from="1610112800752" duration="11984000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -487,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610124736922</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Correction in OrderResource.php; field product for collection return">
+      <created>1610125767198</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1610125767198</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="List Permissions Available and Attach with Profile" />
     <MESSAGE value="Detach Permission Profile" />
     <MESSAGE value="Create PlanProfiles Attach" />
     <MESSAGE value="Create Default Authentication and TableUserSeeder" />
@@ -532,7 +541,8 @@
     <MESSAGE value="Create QrCode By Table" />
     <MESSAGE value="&#10;Create Unique Tenant rule and update category, product and table requests" />
     <MESSAGE value="Include field in Order e Evaluation Resource" />
-    <option name="LAST_COMMIT_MESSAGE" value="Include field in Order e Evaluation Resource" />
+    <MESSAGE value="Correction in OrderResource.php; field product for collection return" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction in OrderResource.php; field product for collection return" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -580,11 +590,11 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610124731775">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610125761316">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063681407" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610124731775" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610125761316" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1610055872065">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -596,11 +606,11 @@
     </state>
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1607966755307" />
     <state x="474" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1607788196659" />
-    <state x="1584" y="586" key="NewPhpFileDialog" timestamp="1610117534190">
+    <state x="1584" y="586" key="NewPhpFileDialog" timestamp="1610131251004">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609874929848" />
-    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610117534190" />
+    <state x="1584" y="586" key="NewPhpFileDialog/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610131251004" />
     <state x="388" y="322" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1609700547300" />
     <state x="1565" y="597" key="ReplaceDuplicatesPrompt" timestamp="1609347137946">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -610,11 +620,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="18" width="916" height="710" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610124626384" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1610124774161">
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1610125767568">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879271878" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610124774161" />
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610125767568" />
     <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609703688905" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />
@@ -629,11 +639,11 @@
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610058899084" />
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607535457195" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1610125346156">
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup" timestamp="1610133151940">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063490776" />
-    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610125346156" />
+    <state x="1462" y="89" width="672" height="1235" key="search.everywhere.popup/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610133151940" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609700814854" />
   </component>
   <component name="XDebuggerManager">
@@ -643,6 +653,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/pages/plans/create.blade.php</url>
           <line>14</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

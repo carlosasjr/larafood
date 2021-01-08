@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ACL\ProfileController;
 use App\Http\Controllers\Admin\ACL\RoleController;
 use App\Http\Controllers\Admin\ACL\UserRoleController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PlanController;
 use App\Http\Controllers\Admin\PlanDetailController;
 use App\Http\Controllers\Admin\ProductCategoryController;
@@ -111,6 +112,9 @@ Route::prefix('admin')
         /** PLANS */
         Route::any('plans/search', [PlanController::class, 'search'])->name('plans.search');
         Route::resource('plans', PlanController::class);
+
+        /** DASHBOARD */
+        Route::get('/', [DashboardController::class, 'home'])->name('admin.index');
     });
 
 
