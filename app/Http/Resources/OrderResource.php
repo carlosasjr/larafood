@@ -22,7 +22,7 @@ class OrderResource extends JsonResource
             'company'   => new TenantResource($this->tenant),
             'client'    => ($this->client_id) ? new ClientResource($this->client) : '',
             'table'     => ($this->table) ? new TableResource($this->table) : '',
-            'products'  => new ProductResource($this->products),
+            'products'  => ProductResource::collection($this->products),
             'evaluations' => EvaluationOrderResource::collection($this->evaluations),
 
         ];
