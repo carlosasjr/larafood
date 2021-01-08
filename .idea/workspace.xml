@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caca76f9-de60-4fb9-bc16-9cd996abdd7d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +279,7 @@
       <workItem from="1609791752913" duration="29511000" />
       <workItem from="1609966640988" duration="12912000" />
       <workItem from="1610057543539" duration="5957000" />
-      <workItem from="1610112800752" duration="12964000" />
+      <workItem from="1610112800752" duration="14018000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1607380911413</created>
@@ -518,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610134924630</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="phpunit.xml">
+      <created>1610135305208</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610135305208</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +546,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Create home page and list of the plans available &#10;Create Tenants migrate and model" />
     <MESSAGE value="Tenant and User Registration of the chosen plan;&#10;&#10;Refactoring the Registration code and creating the TenantService class" />
     <MESSAGE value="Create User CRUD and Scope Filter by Tenant" />
     <MESSAGE value="Create Category and Product CRUD;&#10;Create Global TenantScope override Booted Method using Trait" />
@@ -563,7 +570,8 @@
     <MESSAGE value="Create Dashboard Home" />
     <MESSAGE value="workflows" />
     <MESSAGE value="create ExampleTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="create ExampleTest.php" />
+    <MESSAGE value="phpunit.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="phpunit.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1607712717201">
@@ -611,11 +619,11 @@
     <state x="411" y="129" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1608665097080" />
     <state x="1597" y="407" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1608055025151" />
     <state x="443" y="71" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.728@0.0.1366.728" timestamp="1607788420130" />
-    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610134919866">
+    <state x="1366" y="224" key="CommitChangelistDialog2" timestamp="1610135296513">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1610063681407" />
-    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610134919866" />
+    <state x="1366" y="224" key="CommitChangelistDialog2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610135296513" />
     <state x="415" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609703680314" />
     <state x="1530" y="404" key="FileChooserDialogImpl" timestamp="1610055872065">
       <screen x="1366" y="0" width="768" height="1326" />
@@ -641,11 +649,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="18" width="916" height="710" key="SettingsEditor/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610124626384" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1610134943063">
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2" timestamp="1610135318165">
       <screen x="1366" y="0" width="768" height="1326" />
     </state>
     <state x="209" y="173" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@0.0.1366.728" timestamp="1609879271878" />
-    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610134943063" />
+    <state x="1366" y="396" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.768.1326@1366.0.768.1326" timestamp="1610135318165" />
     <state x="112" y="115" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609703688905" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1607552388813">
       <screen x="0" y="0" width="1366" height="728" />

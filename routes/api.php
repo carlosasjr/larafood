@@ -57,4 +57,9 @@ Route::group([
 });
 
 
+Route::get('/', function () {
+    return response()->json(['message' => 'ok']);
+});
+
+
 
