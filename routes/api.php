@@ -17,14 +17,14 @@ Route::post('auth/register', [RegisterController::class, 'store']);
 /** SANCTUM CREATE TOKEN */
 Route::post('auth/token', [AuthClientController::class, 'auth']);
 
+Route::get('auth/me', [AuthClientController::class, 'me'])->middleware('auth:sanctum');
+Route::post('auth/logout', [AuthClientController::class, 'logout'])->middleware('auth:sanctum');
+
 
 Route::group([
     'prefix' => 'v1',
     'middleware' => ['auth:sanctum'],
 ], function () {
-    Route::get('auth/me', [AuthClientController::class, 'me']);
-    Route::post('auth/logout', [AuthClientController::class, 'logout']);
-
     /** ORDERS */
     Route::post('auth/orders', [OrderApiController::class, 'store']);
     Route::post('auth/orders/{identify}/evaluations', [EvaluationApiController::class, 'store']);

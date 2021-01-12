@@ -21,7 +21,6 @@ class AuthClientController extends Controller
 
         $client = Client::where('email', $request->email)->first();
 
-        //dd($client, $request->all());
 
         if (!$client || !Hash::check($request->password, $client->password)) {
             return response()->json(['message' => trans('messages.invalid_credentials')], 404);
@@ -36,7 +35,9 @@ class AuthClientController extends Controller
 
     public function me(Request $request)
     {
-        return new ClientResource($request->user());
+        $client = $request->user();
+
+        return new ClientResource($client);
     }
 
     public function logout(Request $request)

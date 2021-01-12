@@ -69,7 +69,7 @@ class AuthTest extends TestCase
     */
    public function testErrorGetMe()
     {
-        $response = $this->getJson('/api/v1/auth/me');
+        $response = $this->getJson('/api/auth/me');
 
         $response->assertStatus(401);
     }
@@ -84,7 +84,7 @@ class AuthTest extends TestCase
         $client = Client::factory()->create();
         $token = $client->createToken(Str::random(10))->plainTextToken;
 
-        $response = $this->getJson('/api/v1/auth/me', [
+        $response = $this->getJson('/api/auth/me', [
             'Authorization' => "Bearer {$token}"
         ]);
 
@@ -101,7 +101,7 @@ class AuthTest extends TestCase
         $token = $client->createToken(Str::random(10))->plainTextToken;
 
 
-        $response = $this->postJson('/api/v1/auth/logout', [], [
+        $response = $this->postJson('/api/auth/logout', [], [
             'Authorization' => "Bearer {$token}"
         ]);
 
